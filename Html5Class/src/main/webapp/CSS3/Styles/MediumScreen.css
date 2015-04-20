@@ -1,0 +1,25 @@
+﻿#container{
+	width:780px;
+	margin:auto;
+}
+#div1,#div2,#div3{
+	text-align:center;
+	border:1px blue solid;
+}
+#div1{
+	width:200px;
+	background-color:orange;
+	float:left;
+	height:400px;}
+#div2{
+	width:540px;
+	background-color:yellow;
+	float:left;
+	height:400px;}
+#div3{
+    clear:both;
+	width:740px;
+	background-color:green;
+	height:100px;
+}
+

@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        #ul1{
+            list-style-type:none;
+        }
+    </style>
+    <script>
+        //統一瀏覽器 requestFileSystem 物件的用法
+        window.requestFileSystem = window.requestFileSystem || window.webkitRequestFileSystem;
+        var fs;
+      
+        window.addEventListener("load", init, false);
+        function init() {
+            var btns = document.querySelectorAll("input[type='button']");
+            btns[0].addEventListener("click", createFS, false);
+            btns[1].addEventListener("click", createFile, false);
+            btns[2].addEventListener("click", createDirectory, false);
+            btns[3].addEventListener("click", browseDirectory, false);
+            btns[4].addEventListener("click", ChangeDirectoryName, false);
+            btns[5].addEventListener("click", ChangeFileName, false);
+            btns[6].addEventListener("click", browseSubDirectory, false);
+            btns[7].addEventListener("click", writeFile, false);
+        }
+        function createFS() {
+            //使用window.requestFileSytem建立一個檔案系統(FileSystem)物件  PERSISTENT
+
+        }
+        function successHandler(fileSystem) {
+            fs = fileSystem;
+            showMessage(fs.root);
+          
+        }
+        function errorHandler(e) {
+            var msg = '';
+            switch (e.code) {
+                case FileError.QUOTA_EXCEEDED_ERR:
+                    msg = 'QUOTA_EXCEEDED_ERR';
+                    break;
+                case FileError.NOT_FOUND_ERR:
+                    msg = 'NOT_FOUND_ERR';
+                    break;
+                case FileError.SECURITY_ERR:
+                    msg = 'SECURITY_ERR';
+                    break;
+                case FileError.INVALID_MODIFICATION_ERR:
+                    msg = 'INVALID_MODIFICATION_ERR';
+                    break;
+                case FileError.INVALID_STATE_ERR:
+                    msg = 'INVALID_STATE_ERR';
+                    break;
+                default:
+                    msg = 'Unknown Error';
+                    break;
+            };
+            alert('Error: ' + msg);
+        }
+
+        //使用getFile建立檔案
+        function createFile() {
+            var fileName = prompt("請輸入檔案名稱");
+           
+
+        }
+
+        //使用getDirectory建立資料夾
+        function createDirectory() {
+            var folderName = prompt("請輸入檔案名稱");
+           
+        }
+
+
+        //讀取資料夾內容
+        function browseDirectory() {
+           
+        }
+
+        //刪除檔案或資料夾
+        function removeFS(fp,type) {
+           
+        }
+
+        function showMessage(f) {
+            var eleUl = document.querySelector("ul");
+
+            var liName = document.createElement("li");
+            var txtName = document.createTextNode("名稱 : " + f.name);
+            liName.appendChild(txtName);
+
+
+            var liFile = document.createElement("li");
+            var txtFile = document.createTextNode("檔案嗎? " + f.isFile);
+            liFile.appendChild(txtFile);
+
+
+            var liDir = document.createElement("li");
+            var txtDir = document.createTextNode("資料夾嗎? " + f.isDirectory);
+            liDir.appendChild(txtDir);
+
+
+            var liPath = document.createElement("li");
+            var txtPath = document.createTextNode("完整路徑 : " + f.fullPath);
+            liPath.appendChild(txtPath);
+
+            eleUl.appendChild(liName);
+            eleUl.appendChild(liFile);
+            eleUl.appendChild(liDir);
+            eleUl.appendChild(liPath);
+        }
+
+        //修改資料夾名稱
+        function ChangeDirectoryName() {
+            
+        }
+
+        //修改檔案名稱
+        function ChangeFileName() {
+            
+          
+        }
+
+        //讀取子目錄下內容
+        function browseSubDirectory() {
+         
+        }
+
+        //寫入內容
+        function writeFile() {
+            
+        }
+
+
+        //讀取內容
+        function readFile(fileName) {
+            
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="建立檔案系統(FileSystem)物件" />
+    <input type="button" value="建立檔案(File)" />
+    <input type="button" value="建立目錄(Directory)" />
+    <input type="button" value="讀取目錄內容" />
+    <input type="button" value="修改目錄名稱" />
+    <input type="button" value="修改檔案名稱" />
+    <input type="button" value="讀取子目錄下內容" />
+    <input type="button" value="寫入內容" />
+    <hr />
+    <textarea id="txt1" rows="10" cols="50"></textarea>
+    <ul>
+    </ul>
+     <ul id="ul1">
+    </ul>
+</body>
+</html>

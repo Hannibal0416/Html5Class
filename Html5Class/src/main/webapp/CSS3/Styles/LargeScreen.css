@@ -1,0 +1,26 @@
+﻿ #container {
+            width: 960px;
+            margin: auto;
+        }
+
+        #div1, #div2, #div3 {
+            text-align: center;
+            float: left;
+            border: 1px blue solid;
+            height: 600px;
+        }
+
+        #div1 {
+            width: 200px;
+            background-color: orange;
+        }
+
+        #div2 {
+            width: 540px;
+            background-color: yellow;
+        }
+
+        #div3 {
+            width: 200px;
+            background-color: green;
+        }

@@ -1,0 +1,137 @@
+body {
+	background-color: #e6e6e6;
+	color: #000305;
+	font-size: 87.5%;
+	line-height: 1.429;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	}
+	
+.body {
+	clear: both; 
+	margin: 0 auto; 
+	width: 70%;
+}
+	
+
+/* header的樣式 */
+   
+.header .nav {
+	background: #666;
+	font-size: 1.143em;
+	height: 40px;
+	line-height: 30px;
+	margin: 0 auto 30px auto;
+	text-align: center;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+	
+.header .nav ul {
+	list-style: none; 
+	margin: 0 auto;
+}
+
+.header .nav ul li {
+	float: left; 
+	display: inline; 
+}
+	
+.header .nav a:link, .header .nav a:visited {
+	color: #fff;
+	display: inline-block;
+	height: 30px;
+	padding: 5px 23px;
+	text-decoration: none;
+}
+.header .nav a:hover, .header .nav a:active,
+.header .nav .active a:link, .header .nav .active a:visited {
+	background: #CF5C3F;
+	color: #fff;
+	text-shadow: none !important;
+}
+	
+.header .nav li a {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.header img {
+	width: 30%;
+	height: auto;
+	margin: 3% 0;
+}
+
+
+/* 主要內容的樣式 */
+
+.mainContent {
+	overflow: hidden;
+	line-height: 25px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+.content {
+	width: 68%;
+	float: left;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+}
+
+.article {
+	background-color: #FFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+	padding: 2% 5%;	
+	margin-bottom: 2%;
+}
+
+.post-info {
+	font-style: italic;
+	color: #999;
+	font-size: 85%;
+}
+
+/* 側欄的樣式 */
+
+.sidebar {
+	width: 24%;
+	float: left;
+	margin-left: 2%;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+	background-color: #FFF;	
+	padding: 1% 2%;
+	margin-bottom: 2%;
+}
+
+
+
+/*  頁尾的樣式  */
+
+.footer {
+	width: 100%;
+	float: left;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	padding-left: 0;
+	background-color: #666;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+	color: #FFF;	
+}
+
+.footer p {
+	width: 91%;
+	margin: 2% auto;
+}
+
+

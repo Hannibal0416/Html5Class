@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<!--to do要製作一個manifest檔案，指定將Drawing.html、Drawing.css、Drawing.js以及JustOldFashion.ttf檔案存在瀏覽器中-->
+<!--to do 在html標籤，使用manifest屬性指定manifest檔案-->
+<head>
+<meta charset="utf-8"/>
+    <title></title>
+    <link href="Drawing.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="div1">
+       <h2>Offline Web Applicaiton</h2>
+        <input type="button" value="更新" id="buttonUpdate" />
+        <div>
+            <label for="color1">顏色</label><input type="color" id="color1">
+        </div>
+        <div>
+            <label for="number1">線條寬度</label><input type="number" min="2" max="20" step="2" id="number1" value="4">
+        </div>
+        <div>
+            <label for="text1">留言</label><input type="text" id="text1" size="50" value="台灣大哥大" />
+        </div>
+        <div>
+            <label for="file1">選擇圖檔</label><input type="file" id="file1" accept="image/*" />
+        </div>
+        <canvas id="myCanvas" width="460" height="300"></canvas>
+        <br />
+        <input type="button" value="儲存" id="buttonSave" />
+        <input type="button" value="清除" id="buttonClear" />
+    </div>
+    <div id="div2">
+
+        <img id="img1" />
+    </div>
+    <script src="Drawing.js"></script>
+
+
+    <script>
+        //Offline Web Appliction
+        document.querySelector('#buttonUpdate').addEventListener('click', function () {
+            //to do 按下按鈕後檢查manifest檔案有沒有更新
+                    
+        }, false);
+
+        //to do 設定updateready事件，在此事件中使用swapCache方法置換存在瀏覽器中的檔案
+       
+
+
+    </script>
+</body>
+</html>

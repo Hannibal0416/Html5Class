@@ -1,0 +1,35 @@
+﻿#myCanvas {
+    border: 1px green solid;
+}
+
+#div1 {
+    margin:0 auto;
+    width: 460px;
+}
+@font-face{
+	font-family:myFont;
+	src:url(JustOldFashion.ttf);
+}
+
+#div1 > h2{
+    background-color:#00ff90;
+    padding:5px;
+    text-align:center;
+    font-family:myFont;
+   
+}
+#div1  img{
+    width:20px;
+}
+
+div > label {    width: 100px;
+    /*text-align:right;*/
+    margin-right: 5px;
+    display: inline-block;
+    text-align: justify;
+    text-justify: inter-ideograph;
+}
+
+#div2{
+    padding-top:100px;
+}

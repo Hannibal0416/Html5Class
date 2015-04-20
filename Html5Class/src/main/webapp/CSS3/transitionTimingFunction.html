@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        /*.s1 {
+            width:60px;
+            height:60px;
+            border:dotted 1px red;
+            margin:10px;
+        }*/
+    </style>
+    <style>
+        #timings_demo {
+            position: relative;
+            width: 530px;
+            height: 470px;
+            margin: 0 auto 10px;
+            border: 1px #aaa solid;
+            padding: 10px;
+        }
+
+        .test_box {
+            font-size: 12px;
+            position: relative;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            background-color:#0f0;
+            border: 1px #808080 solid;
+        }
+
+            .test_box p {
+                text-align: center;
+                /*padding-top: 4px;*/
+            }
+
+        #ease.test_box {
+            -webkit-transition: all 4s ease;
+            -moz-transition: all 4s ease;
+            -o-transition: all 4s ease;
+            transition: all 4s ease;
+           
+        }
+
+        #ease-in.test_box {
+            -webkit-transition: all 4s ease-in;
+            -moz-transition: all 4s ease-in;
+            -o-transition: all 4s ease-in;
+            transition: all 4s ease-in;
+     
+        }
+
+        #ease-out.test_box {
+            -webkit-transition: all 4s ease-out;
+            -moz-transition: all 4s ease-out;
+            -o-transition: all 4s ease-out;
+            transition: all 4s ease-out;
+         
+        }
+
+        #ease-in-out.test_box {
+            -webkit-transition: all 4s ease-in-out;
+            -moz-transition: all 4s ease-in-out;
+            -o-transition: all 4s ease-in-out;
+            transition: all 4s ease-in-out;
+        
+        }
+
+        #linear.test_box {
+            -webkit-transition: all 4s linear;
+            -moz-transition: all 4s linear;
+            -o-transition: all 4s linear;
+            transition: all 4s linear;
+        
+        }
+
+        #custom.test_box {
+            -webkit-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+            -moz-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+            -o-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+            transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+           
+        }
+        /*#negative.test_box {
+            -webkit-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+            -moz-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+            -o-transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+            transition: all 4s cubic-bezier(1.000, -0.530, 0.405, 1.425);
+           
+        }*/
+        #timings_demo:hover .test_box, #timings_demo.hover_effect .test_box {
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            border-radius: 30px;
+            -webkit-transform: rotate(720deg);
+            -moz-transform: rotate(720deg);
+            -o-transform: rotate(720deg);
+            -ms-transform: rotate(720deg);
+            transform: rotate(720deg);
+            margin-left: 420px;
+            background-color:#f00;
+            color:#fff;
+        }
+</style>
+    <script>
+        //document.addEventListener("load", init(), false);
+        //function init() {
+        //    var myDiv = document.getElementById("div1");
+        //    div1.addEventListener("mouseover", move(), false);
+        //    function move() {
+
+        //    }
+        //}
+    </script>
+</head>
+<body>
+  <!--  <div id="div1" style="border:solid 1px blue;width:500px;height:500px">
+        <div class="s1">ease</div>
+
+    </div> -->
+    <div id="timings_demo" class="shadow hover">
+        <div id="ease" class="test_box">
+            <p>ease<br />全速開始<br />慢慢結束</p>
+        </div>
+        <div id="ease-in" class="test_box">
+            <p>ease-in<br />慢慢加速</p>
+        </div>
+        <div id="ease-out" class="test_box">
+            <p>ease-out<br />慢慢減速</p>
+        </div>
+        <div id="ease-in-out" class="test_box">
+            <p>ease-in-out<br />慢慢加速<br />慢慢減速</p>
+        </div>
+        <div id="linear" class="test_box">
+            <p>linear<br />速度一致</p>
+        </div>
+        <div id="custom" class="test_box">
+            <p>cubic-bezier<br>貝茲曲線</p>
+        </div>
+      
+        <p class="center">滑鼠移上來，就會看到transition-timing-function執行的結果</p>
+    </div>
+</body>
+</html>

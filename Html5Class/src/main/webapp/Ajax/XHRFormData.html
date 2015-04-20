@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+    <title>Bootstrape Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   
+    <script>
+        window.addEventListener("load", init, false);
+        function init() {
+            var btnSubmit = document.getElementById("buttonSubmit");
+            btnSubmit.addEventListener("click", send, false);
+        }
+        function send() {
+          
+        }
+
+
+    </script>
+
+
+
+</head>
+<body>
+   
+               
+                        <form name="userInfo" method="post" action="formDataHandler.ashx">
+                            類型 : <select name="type">
+                                <option value="1">一般會員</option>
+                                <option value="2">企業會員</option>
+                                <option value="3">同業會員</option>
+                            </select><br />
+                            帳號 : <input type="text" name="userName" /><br />
+                            密碼 : <input type="password" name="password" /><br />
+
+
+
+                            <input type="button" value="送出" id="buttonSubmit" />
+                            <div id="div1"></div>
+                        </form> 
+               
+</body>
+</html>
