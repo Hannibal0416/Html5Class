@@ -40,9 +40,9 @@
 <body>
     <fieldset>
         <legend>會員註冊</legend>
-    <form>
+    <form id="myForm" name = "myForm">
         <div>
-           <label for="account" class="title">帳號</label><input type="text" id="account" name="account"  /> <!-- 1.網頁載入時將游標停駐在帳號的文字輸入方塊中 2.取消瀏覽器會自動記錄輸入資料的功能 3.請確定帳號一定要輸入-->
+           <label for="account" class="title">帳號</label><input type="text" id="account" name="account" required/> <!-- 1.網頁載入時將游標停駐在帳號的文字輸入方塊中 2.取消瀏覽器會自動記錄輸入資料的功能 3.請確定帳號一定要輸入-->
         </div>
         <div>
            <label for="pwd1" class="title">密碼</label><input type="password" id="pwd1" name="pwd1" />
@@ -68,5 +68,50 @@
     </form>
         
     </fieldset>
+    
+    <script type="text/javascript">
+//     	document.myForm.addEventListener('submit',function() {
+// 			var pwd1 = document.querySelector("#pwd1");
+// 			var pwd2 = document.querySelector("#pwd2");
+// 			if(pwd1 != pwd2) {
+// 				alert("密碼不符");
+// 				event.preventDefault();
+// 			}
+// 		}) ;  
+    
+    	document.querySelector('#account').addEventListener('submit',myValidity) ;
+    	document.querySelector('#email').addEventListener('submit',myValidity) ;
+    	document.querySelector('#pwd2').addEventListener('submit',check) ;
+    	
+    	function myValidity() {
+    		console.log(this.validity);
+			var msg="";
+			switch(true) {
+			case this.validity.valueMissing:
+				msg="必填"
+				break;
+			case this.validity.typeMismatch:
+				msg="格式不正確";
+				break;
+			default:
+				break;
+			}
+			
+			this.setCustomValidity(msg);
+		}
+    	
+    	function check() {
+    		var pwd1 = document.querySelector("#pwd1");
+			var pwd2 = document.querySelector("#pwd2");
+			if(pwd1 != pwd2) {
+				this.setCustomValidity("密碼錯誤");
+			} else {
+				this.setCustomValidity("");
+			}
+    	}
+    </script>
+    
+    
+    
 </body>
 </html>

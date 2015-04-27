@@ -30,7 +30,7 @@
     <script>
         var musics = [
                  { name: "十年", url: "music/十年.mp3" },
-                 { name: "K歌之王", url: "music/歌之王.mp3" },
+                 { name: "K歌之王", url: "music/K歌之王.mp3" },
                  { name: "兄妹", url: "music/兄妹.mp3" },
                  { name: "好就不見", url: "music/好久不見.mp3" },
                  { name: "我們都寂寞", url: "music/我們都寂寞.mp3" }];
@@ -59,13 +59,16 @@
             index = i;
 
             //從musics的JSON物件中讀取要撥放的音樂
-
+			var playFile = musics[index];
+			console.log(playFile);
+            audio.setAttribute('src',playFile.url);
+            audio.play();
             //將其音樂檔案的位置設定給audio物件
 
             //撥放
 
             //將撥放的音樂名稱顯示在id為playSong的span標籤中
-
+			document.querySelector('#playSong').innerHTML='現在播放'+playFile.name;
         }
 
         //在timeupdate事件中
@@ -73,11 +76,13 @@
         audio.addEventListener("timeupdate", function () {           
 
             //目前播放進度
-
+			var s = parseInt((audio.currentTime % 60));
+			var m = parseInt((audio.currentTime / 60));
+            var ml = parseInt((audio.duration/60))
             //整首歌的播放長度
-
+			var sl = parseInt((audio.duration % 60));
             //將撥放的音樂的進度顯示在id為info的span標籤中
-
+			document.querySelector('#info').innerHTML = m+ ":" + s + "/" + ml + ":" + sl
         }, false);
 
 
@@ -114,13 +119,13 @@
             if (this.value == "pause") {
                 //如果button的value是pause
                 //表示按下按鈕就要暫停撥放音樂
-
+				audio.pause();
 
                 this.value = "play";
             } else {
                 //如果button的value是play
                 //表示按下按鈕就要撥放音樂
-                
+                audio.play();
 
                 this.value = "pause";
             }
@@ -130,7 +135,7 @@
         //to do 5 控制音量
         document.getElementById("volume").addEventListener("change", function () {
             //設定音量的大小 parseFloat(this.value / 10)
-            
+            audio.volume = parseFloat(this.value/10);
         })
 
     </script>
