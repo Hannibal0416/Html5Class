@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+		
+		var imageObj=new Image();
+		imageObj.addEventListener("load",function(){
+			context.drawImage(imageObj,0,0);
+			context.drawImage(imageObj,193,91,186,176,canvas.width/2,canvas.height/2);
+		});
+		imageObj.src="../../CSS3/Images/Cars1.jpg";
+	}
+
+</script>
+
+
+</head>
+<body>
+	<canvas id="myCanvas" width="400px" height = "300px">
+		
+	
+	</canvas>
+</body>
+</html>

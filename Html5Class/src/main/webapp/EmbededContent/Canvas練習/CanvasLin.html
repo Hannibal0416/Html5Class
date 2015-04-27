@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var canvas = document.getElementById("myCanvas");
+		var context = canvas.getContext("2d");
+		
+		context.strokeStyle = "red";
+		context.fillStyle = "orange";
+		
+		var x = canvas.width / 2;
+		var y = canvas.height / 2;
+// 		var radius = 75;
+		context.moveTo(x,y);
+		context.arc(x,y,100,0*Math.PI,1*Math.PI,false);
+		context.stroke();
+	}
+
+</script>
+
+</head>
+<body>
+	<canvas id="myCanvas" width="400px" height = "300px">
+		
+	
+	</canvas>
+</body>
+</html>
